@@ -9,13 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
 from pathlib import Path
-from re import S
 
-from dotenv import load_dotenv
 
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'some_random_default_string')
+SECRET_KEY = 'django-insecure-khz((k*-xq8$hzypo(pt#)35+gzacm*ht=!og5vgdp2e-kq=2w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zun.pythonanywhere.com']
 
 
 # Application definition
@@ -134,7 +130,6 @@ MEDIA_URL = '/images/'
 STATICFILES_DIRS = [ BASE_DIR / 'static']
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
-STATIC_ROOT = '/var/www/rycc/static'
 
 
 # Default primary key field type
